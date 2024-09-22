@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="flex items-center space-x-8">
               {/* <ThemeToggler/> */}
               <Link
-                href="https://github.com/Saurav-Pant/Blood-Donation-Project"
+                href="https://github.com/parassalve11"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transform hover:-translate-y-1 transition-transform duration-300"
@@ -33,7 +33,7 @@ const Footer = () => {
                 <BsGithub size={30} className="" />
               </Link>
               <Link
-                href="https://twitter.com/Saurav_Pant_"
+                href="https://x.com/ParasSalve59821"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transform hover:-translate-y-1 transition-transform duration-300"

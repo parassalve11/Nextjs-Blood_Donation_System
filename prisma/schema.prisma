@@ -3,12 +3,13 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
 model Donor {
-  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  id         String @id @default(cuid()) @map("_id") 
   firstName  String
   lastName   String
   phone      String
@@ -22,7 +23,7 @@ model Donor {
 }
 
 model DonorOrg {
-  id                  String @id @default(auto()) @map("_id") @db.ObjectId
+  id                  String @id @default(cuid()) @map("_id")
   OrganisationName    String
   OrganisationPhone   String
   OrganisationEmail   String @unique
